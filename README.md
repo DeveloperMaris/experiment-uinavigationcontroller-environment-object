@@ -39,7 +39,14 @@ Provide an EnvironmentObject to this struct and place it into the `UIHostingCont
 ```swift
 struct CustomNavigationView<ViewController: UIViewController>: UIViewControllerRepresentable {
     var content: () -> ViewController
-    ...
+    
+    func makeUIViewController(context: Context) -> UINavigationController {
+        UINavigationController(rootViewController: content())
+    }
+
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
+        // modify navigation controller
+    }
 }
 
 let view = CustomNavigationView { UIHostingController(rootView: ContentView()) }
