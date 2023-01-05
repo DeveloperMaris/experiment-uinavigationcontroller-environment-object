@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		489CF30D29671CF7001ADE33 /* NavigationControllerEnvironmentObjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF30C29671CF7001ADE33 /* NavigationControllerEnvironmentObjectApp.swift */; };
 		489CF30F29671CF7001ADE33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF30E29671CF7001ADE33 /* ContentView.swift */; };
 		489CF31129671CF8001ADE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489CF31029671CF8001ADE33 /* Assets.xcassets */; };
 		489CF31429671CF8001ADE33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489CF31329671CF8001ADE33 /* Preview Assets.xcassets */; };
+		489CF31B29671D14001ADE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF31A29671D14001ADE33 /* AppDelegate.swift */; };
+		489CF31D29671D28001ADE33 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF31C29671D28001ADE33 /* Bootstrap.swift */; };
+		489CF31F29671DF0001ADE33 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF31E29671DF0001ADE33 /* Profile.swift */; };
+		489CF32229671E21001ADE33 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489CF32129671E21001ADE33 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		489CF30929671CF7001ADE33 /* NavigationControllerEnvironmentObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationControllerEnvironmentObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		489CF30C29671CF7001ADE33 /* NavigationControllerEnvironmentObjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerEnvironmentObjectApp.swift; sourceTree = "<group>"; };
 		489CF30E29671CF7001ADE33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		489CF31029671CF8001ADE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		489CF31329671CF8001ADE33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		489CF31A29671D14001ADE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		489CF31C29671D28001ADE33 /* Bootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
+		489CF31E29671DF0001ADE33 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		489CF32129671E21001ADE33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		489CF32329671F03001ADE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		489CF30B29671CF7001ADE33 /* NavigationControllerEnvironmentObject */ = {
 			isa = PBXGroup;
 			children = (
-				489CF30C29671CF7001ADE33 /* NavigationControllerEnvironmentObjectApp.swift */,
+				489CF32329671F03001ADE33 /* Info.plist */,
+				489CF31A29671D14001ADE33 /* AppDelegate.swift */,
+				489CF31C29671D28001ADE33 /* Bootstrap.swift */,
+				489CF31E29671DF0001ADE33 /* Profile.swift */,
 				489CF30E29671CF7001ADE33 /* ContentView.swift */,
+				489CF32129671E21001ADE33 /* SettingsView.swift */,
 				489CF31029671CF8001ADE33 /* Assets.xcassets */,
 				489CF31229671CF8001ADE33 /* Preview Content */,
 			);
@@ -137,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489CF31D29671D28001ADE33 /* Bootstrap.swift in Sources */,
+				489CF31F29671DF0001ADE33 /* Profile.swift in Sources */,
+				489CF31B29671D14001ADE33 /* AppDelegate.swift in Sources */,
+				489CF32229671E21001ADE33 /* SettingsView.swift in Sources */,
 				489CF30F29671CF7001ADE33 /* ContentView.swift in Sources */,
-				489CF30D29671CF7001ADE33 /* NavigationControllerEnvironmentObjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +284,7 @@
 				DEVELOPMENT_TEAM = 94EK2XEZUL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = NavigationControllerEnvironmentObject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +313,7 @@
 				DEVELOPMENT_TEAM = 94EK2XEZUL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = NavigationControllerEnvironmentObject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

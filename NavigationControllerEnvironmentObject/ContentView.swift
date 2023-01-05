@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var profile: Profile
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, \(profile.username)!")
         }
-        .padding()
+        .toolbar {
+            ToolbarItem {
+                NavigationLink("Settings") {
+                    SettingsView()
+                }
+            }
+        }
+        .navigationTitle("Home")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Profile())
     }
 }
