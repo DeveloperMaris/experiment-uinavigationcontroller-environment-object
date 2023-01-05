@@ -56,6 +56,15 @@ let controller = UIHostingController(rootView: view)
 // show controller on the screen
 ```
 
+In the end we get a view hierarchy like this:
+
+```swift
+UIHostingController 
+  > UINavigationController as UIViewRepresentable with environmentObject() 
+    > UIHostingController 
+      > some View
+```
+
 ## Requirements
 
 - Xcode 14.1.0
