@@ -37,7 +37,7 @@ To solve this issue by wrapping the `UINavigationController` in a `UIViewControl
 Provide an EnvironmentObject to this struct and place it into the `UIHostingController`.
 
 ```swift
-struct CustomNavigationView<ViewController: UIViewController>: UIViewControllerRepresentable {
+struct NavigationControllerView<ViewController: UIViewController>: UIViewControllerRepresentable {
     var content: () -> ViewController
     
     func makeUIViewController(context: Context) -> UINavigationController {
@@ -49,8 +49,12 @@ struct CustomNavigationView<ViewController: UIViewController>: UIViewControllerR
     }
 }
 
-let view = CustomNavigationView { UIHostingController(rootView: ContentView()) }
-    .environmentObject(profile) // where Profile is an ObservableObject.
+...
+
+let view = NavigationControllerView { 
+    UIHostingController(rootView: ContentView())
+}
+.environmentObject(profile) // where Profile is an ObservableObject.
     
 let controller = UIHostingController(rootView: view)
 // show controller on the screen

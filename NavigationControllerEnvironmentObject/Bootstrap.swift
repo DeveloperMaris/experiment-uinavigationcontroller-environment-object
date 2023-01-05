@@ -29,7 +29,7 @@ import UIKit
     /// Masking UINavigationController in UIViewControllerRepresentable is necessary so that we would be able to inject the EnvironmentObject into it.
     /// - Returns: Navigation view as a swiftui view.
     private func makeContentView() -> some View {
-        CustomNavigationView {
+        NavigationControllerView {
             UIHostingController(rootView: ContentView())
         } modifier: { controller in
             controller.navigationBar.prefersLargeTitles = true
@@ -39,7 +39,7 @@ import UIKit
     }
 }
 
-private struct CustomNavigationView<ViewController: UIViewController>: UIViewControllerRepresentable {
+private struct NavigationControllerView<ViewController: UIViewController>: UIViewControllerRepresentable {
     /// A closure containing the instructions for SwiftUI view creation, which will be used as a root view for the navigation controller.
     var content: () -> ViewController
 
